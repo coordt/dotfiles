@@ -79,6 +79,7 @@ cask "google-chrome"
 cask "inkscape"
 cask "iterm2"
 cask "mailplane"
+cask "pycharm"
 cask "sublime-text"
 cask "xquartz"
 
