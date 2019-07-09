@@ -81,6 +81,7 @@ cask "iterm2"
 cask "mailplane"
 cask "pycharm"
 cask "sublime-text"
+cask "shapes"
 cask "xquartz"
 
 mas "Affinity Designer", id: 824171161
