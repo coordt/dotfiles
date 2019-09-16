@@ -3,16 +3,19 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "caskroom/fonts"
+tap "caskroom/versions"
 tap "martido/brew-graph"
 
 # Core utilities
+cask "adoptopenjdk8"
 brew "autoconf" # Automatic configure script builder
 brew "bash" # Bourne-Again SHell, a UNIX command interpreter
+brew "cmake" # Cross-platform make
 brew "expat" # XML 1.0 parser
 brew "gettext", link: true # GNU internationalization (i18n) and localization (l10n) library
 brew "git" # Distributed revision control system
 brew "git-lfs" # Git extension for versioning large files
-brew "graphviz", args: ["with-freetype", "with-librsvg", "with-pango"] # Graph visualization software from AT&T and Bell Labs
+brew "graphviz" # Graph visualization software from AT&T and Bell Labs
 brew "httpie" # User-friendly cURL replacement (command-line HTTP client)
 brew "icu4c" # C/C++ and Java libraries for Unicode and globalization
 brew "jq" # Lightweight and flexible command-line JSON processor
@@ -20,11 +23,13 @@ brew "libmagic" # Implementation of the file(1) command
 brew "libtool" # Generic library support script
 brew "libxmlsec1" # XML security library
 brew "lzlib" # Data compression library
-brew "mackup"
+brew "mackup" # Keep your Mac's application settings in sync
+brew "make" # Utility for directing compilation
 brew "martido/brew-graph/brew-graph"
 brew "mas" # Mac App Store manager
 brew "nano" # Free (GNU) replacement for the Pico text editor
 brew "ncurses" # Text-based UI library
+brew "node" # Platform built on V8 to build network applications
 brew "pandoc" # Swiss-army knife of markup format conversion
 brew "qwt" # Qt Widgets for Technical Applications
 brew "rename" # Perl-powered file rename script with many helpful built-ins
@@ -43,7 +48,7 @@ brew "postgis" # Adds support for geographic objects to PostgreSQL
 # Python
 brew "python", link: false # Interpreted, interactive, object-oriented programming language
 brew "pyenv" # Python version management
-brew "pyenv-virtualenv" # Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv", args: ["HEAD"] # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenvwrapper" # Alternative to pyenv for managing virtualenvs
 brew "sip" # Tool to create Python bindings for C and C++ libraries
 brew "pyqt" # Python bindings for v5 of Qt
@@ -70,7 +75,9 @@ brew "libspatialite" # Adds spatial SQL capabilities to SQLite
 brew "gdal" # Geospatial Data Abstraction Library
 
 # Apps
+cask "1password"
 cask "alfred"
+cask "calibre"
 cask "dash"
 cask "docker"
 cask "dropbox"
@@ -78,6 +85,7 @@ cask "firefox"
 cask "google-chrome"
 cask "inkscape"
 cask "iterm2"
+cask "java11"
 cask "mailplane"
 cask "pycharm"
 cask "sublime-text"
