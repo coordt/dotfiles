@@ -1,110 +1,115 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "caskroom/fonts"
 tap "caskroom/versions"
+tap "codeclimate/formulae"
+tap "jakehilborn/jakehilborn"
 tap "martido/brew-graph"
-
-# Core utilities
-cask "adoptopenjdk8"
-brew "autoconf" # Automatic configure script builder
-brew "bash" # Bourne-Again SHell, a UNIX command interpreter
-brew "cmake" # Cross-platform make
-brew "expat" # XML 1.0 parser
-brew "gettext", link: true # GNU internationalization (i18n) and localization (l10n) library
-brew "git" # Distributed revision control system
-brew "git-lfs" # Git extension for versioning large files
-brew "graphviz" # Graph visualization software from AT&T and Bell Labs
-brew "httpie" # User-friendly cURL replacement (command-line HTTP client)
-brew "icu4c" # C/C++ and Java libraries for Unicode and globalization
-brew "jq" # Lightweight and flexible command-line JSON processor
-brew "libmagic" # Implementation of the file(1) command
-brew "libtool" # Generic library support script
-brew "libxmlsec1" # XML security library
-brew "lzlib" # Data compression library
-brew "mackup" # Keep your Mac's application settings in sync
-brew "make" # Utility for directing compilation
-brew "martido/brew-graph/brew-graph"
-brew "mas" # Mac App Store manager
-brew "nano" # Free (GNU) replacement for the Pico text editor
-brew "ncurses" # Text-based UI library
-brew "node" # Platform built on V8 to build network applications
-brew "pandoc" # Swiss-army knife of markup format conversion
-brew "qwt" # Qt Widgets for Technical Applications
-brew "rename" # Perl-powered file rename script with many helpful built-ins
-brew "ruby" # Powerful, clean, object-oriented scripting language
-brew "tree" # Display directories as trees (with optional color/HTML output)
-brew "wget" # Internet file retriever
-brew "zlib" # General-purpose lossless data-compression library
+brew "autoconf"
+brew "sqlite"
+brew "azure-cli"
+brew "bash"
+brew "icu4c"
+brew "gettext"
+brew "cmake"
+brew "docker-clean"
+brew "expat"
+brew "libtool"
+brew "unixodbc"
+brew "freetds"
+brew "jpeg"
+brew "geos"
+brew "libspatialite"
+brew "little-cms2"
+brew "gdal"
+brew "ghostscript"
+brew "git"
+brew "git-lfs"
+brew "graphviz"
+brew "httpie"
+brew "jpegoptim"
+brew "jq"
+brew "k3d"
+brew "kubernetes-cli", link: false
+brew "libexif"
+brew "libmagic"
+brew "libxmlsec1"
+brew "lzlib"
+brew "mackup"
+brew "make"
+brew "mas"
+brew "ncurses"
+brew "nano"
+brew "node"
+brew "openjdk@11"
+brew "pandoc"
+brew "postgis"
+brew "postgresql@11", restart_service: true
+brew "pyenv"
+brew "pyenv-virtualenv", args: ["HEAD"], link: false
+brew "pyenv-virtualenvwrapper"
+brew "sip"
+brew "pyqt"
+brew "qwt"
+brew "rclone"
+brew "redis", restart_service: true
+brew "rename"
+brew "ruby"
+brew "spatialindex"
+brew "stunnel"
+brew "subversion"
+brew "tree"
+brew "wget"
+brew "zlib"
 brew "zsh"
 brew "zsh-completions"
-
-# Database
-brew "sqlite" # Command-line interface for SQLite
-brew "unixodbc" # ODBC 3 connectivity for UNIX
-brew "postgis" # Adds support for geographic objects to PostgreSQL
-
-# Python
-brew "python", link: false # Interpreted, interactive, object-oriented programming language
-brew "pyenv" # Python version management
-brew "pyenv-virtualenv", args: ["HEAD"] # Pyenv plugin to manage virtualenv
-brew "pyenv-virtualenvwrapper" # Alternative to pyenv for managing virtualenvs
-brew "sip" # Tool to create Python bindings for C and C++ libraries
-brew "pyqt" # Python bindings for v5 of Qt
-
-# Services
-brew "elasticsearch" # Distributed search & analytics engine
-brew "redis", restart_service: true # Persistent key-value database, with built-in net interface
-
-# Imaging
-brew "jpeg" # Image manipulation library
-brew "little-cms2" # Color management engine supporting ICC profiles
-brew "ghostscript" # Interpreter for PostScript and PDF
-brew "jpegoptim" # Utility to optimize JPEG files
-brew "libexif" # EXIF parsing library
-
-# Containers
-brew "docker-clean" # Clean Docker containers, images, networks, and volumes
-brew "kubernetes-cli" # Kubernetes command-line interface
-brew "kubernetes-helm" # The Kubernetes package manager
-
-# Geography
-brew "geos" # Geometry Engine
-brew "libspatialite" # Adds spatial SQL capabilities to SQLite
-brew "gdal" # Geospatial Data Abstraction Library
-
-# Apps
+brew "jakehilborn/jakehilborn/displayplacer"
+brew "martido/brew-graph/brew-graph"
 cask "1password"
 cask "alfred"
+cask "beekeeper-studio"
 cask "calibre"
+cask "chromedriver"
 cask "dash"
 cask "docker"
 cask "dropbox"
 cask "firefox"
-cask "google-chrome"
-cask "inkscape"
-cask "iterm2"
-cask "java11"
-cask "mailplane"
-cask "pycharm"
-cask "sublime-text"
-cask "shapes"
-cask "xquartz"
-
-mas "Affinity Designer", id: 824171161
-mas "Fantastical", id: 975937182
-mas "Slack", id: 803453959
-mas "The Unarchiver", id: 425424353
-
-# Quicklook
-cask "qlcolorcode"
-cask "qlmarkdown"
-cask "quicklook-json"
-cask "quicklook-csv"
-cask "qlstephen"
-
-# Fonts
 cask "font-fira-code"
 cask "font-fira-mono-for-powerline"
+cask "font-lato"
+cask "font-montserrat"
+cask "font-montserrat-alternates"
 cask "font-public-sans"
+cask "google-chrome"
+cask "iterm2"
+cask "java11"
+cask "macdown"
+cask "mailplane"
+cask "pycharm"
+cask "qgis"
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+cask "shapes"
+cask "sublime-text"
+cask "vagrant"
+cask "xquartz"
+mas "Affinity Designer", id: 824171161
+mas "Fantastical", id: 975937182
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
+mas "Table Tool", id: 1122008420
+mas "The Unarchiver", id: 425424353
