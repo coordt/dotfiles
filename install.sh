@@ -21,6 +21,11 @@ sudo dscl . -create /Users/$USER UserShell $(which zsh)
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+# .profile and .zprofile
+rm -rf $HOME/.profile $HOME/.zprofile
+ln -s  $HOME/.dotfiles/.profile $HOME/.profile
+ln -s  $HOME/.dotfiles/.zprofile $HOME/.zprofile
+
 # Install Oh my zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 cp $HOME/.dotfiles/corey.zsh-theme $HOME/.oh-my-zsh/custom/themes/
