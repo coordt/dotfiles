@@ -3,7 +3,7 @@
 echo "Setting up your Mac..."
 
 # Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
+if test ! "$(which brew)"; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -15,7 +15,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # Make ZSH the default shell environment
-sudo dscl . -create /Users/$USER UserShell $(which zsh)
+sudo dscl . -create /Users/$USER UserShell "$(which zsh)"
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
