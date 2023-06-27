@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export DOTFILES="$HOME/.dotfiles"
 
 # Path to your oh-my-zsh installation.
@@ -7,7 +9,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 fi
-export SOLARIZED_THEME="light"
 export ZSH_CUSTOM=$HOME/.dotfiles/zsh-custom
 export ZSH_THEME="corey"
 export DEFAULT_USER=$USER
@@ -31,3 +32,11 @@ source $DOTFILES/path.zsh
 source $DOTFILES/aliases.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

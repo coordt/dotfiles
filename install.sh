@@ -34,6 +34,11 @@ cp $HOME/.dotfiles/corey.zsh-theme $HOME/.oh-my-zsh/custom/themes/
 rm -rf $HOME/.mackup.cfg
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
+# gitignore_global
+rm -rf $HOME/.gitignore_global
+ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+
 # Python setup
 git clone https://github.com/momo-lab/xxenv-latest.git "$(pyenv root)"/plugins/xxenv-latest
 pyenv latest install
