@@ -27,8 +27,8 @@ ln -s  $HOME/.dotfiles/.profile $HOME/.profile
 ln -s  $HOME/.dotfiles/.zprofile $HOME/.zprofile
 
 # Install Oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp $HOME/.dotfiles/corey.zsh-theme $HOME/.oh-my-zsh/custom/themes/
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#cp $HOME/.dotfiles/corey.zsh-theme $HOME/.oh-my-zsh/custom/themes/
 
 # Symlink the Mackup config file to the home directory
 rm -rf $HOME/.mackup.cfg

@@ -12,15 +12,12 @@ PATH=/usr/local/bin:/usr/local/pgsql/bin:~/.local/bin:$PATH
 PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 PATH=/usr/local/opt/ruby/bin:$PATH
 PATH=/usr/local/lib/ruby/gems/bin:$PATH
-PATH="/usr/local/opt/icu4c/bin:$PATH"
-PATH="/usr/local/sbin:$PATH"
+PATH="/usr/homebrew/opt/icu4c/bin:$PATH"
+PATH="/usr/homebrew/opt/icu4c/sbin:$PATH"
+PATH="/usr/homebrew/sbin:$PATH"
 PATH="/usr/local/opt/krb5/bin:$PATH"
 PATH="/usr/local/opt/krb5/sbin:$PATH"
 PATH="$HOME/Library/Application Support/JetBrains/Toolbox:$PATH"
-
-# Python pyenv and virtualenvwrapper configs
-export VIRTUAL_ENV_DISABLE_PROMPT=1
+PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PROJECT_HOME=~/Projects
 export WORKON_HOME=$HOME/.virtualenvs
-VENV="\$(virtualenv_info)"
-pyenv virtualenvwrapper
